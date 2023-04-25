@@ -6,5 +6,9 @@ const buildEslintCommand = (filenames) =>
     .join(' --file ')}`;
 
 module.exports = {
+  '**/*.(ts|tsx)': () => 'yarn tsc --noEmit',
   '*.{js,jsx,ts,tsx}': [buildEslintCommand],
+  '**/*.(ts|tsx|js)': (filenames) => [
+    `yarn prettier --write ${filenames.join(' ')}`,
+  ],
 };
