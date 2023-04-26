@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -10,7 +11,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <div className={'w-screen h-screen flex flex-col justify-center gap-y-8'}>
+        <h1
+          className={
+            'text-dracula-green text-center md:text-8xl sm:text-6xl text-4xl font-medium'
+          }
+        >
+          khanguslee
+        </h1>
+
+        <div className={'text-dracula-pink text-center text-sm'}>
+          <p>
+            Software Engineer @{' '}
+            <Link
+              href="https://www.mongodb.com/products/charts"
+              target="_blank"
+              className="underline hover:text-dracula-pink-100 duration-500"
+            >
+              MongoDB Atlas Charts
+            </Link>
+          </p>
+        </div>
+      </div>
     </>
   );
 }

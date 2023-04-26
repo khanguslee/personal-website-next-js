@@ -1,6 +1,18 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
+import { Source_Code_Pro } from 'next/font/google';
+
+const sourceCodeProFont = Source_Code_Pro({
+  subsets: ['latin'],
+  variable: '--font-source-code-pro',
+});
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <main
+      className={`${sourceCodeProFont.variable} font-sans bg-dracula-darker `}
+    >
+      <Component {...pageProps} />
+    </main>
+  );
 }
