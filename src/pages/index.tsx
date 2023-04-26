@@ -1,5 +1,8 @@
+import LinkIcon from '@/components/LinkIcon';
 import Head from 'next/head';
 import Link from 'next/link';
+
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -14,23 +17,37 @@ export default function Home() {
       <div className={'w-screen h-screen flex flex-col justify-center gap-y-8'}>
         <h1
           className={
-            'text-dracula-green text-center md:text-8xl sm:text-6xl text-4xl font-medium'
+            'text-dracula-pink text-center md:text-8xl sm:text-6xl text-4xl font-medium'
           }
         >
           khanguslee
         </h1>
 
-        <div className={'text-dracula-pink text-center text-sm'}>
-          <p>
+        <div className={'text-center'}>
+          <p className="text-dracula-green text-sm">
             Software Engineer @{' '}
             <Link
               href="https://www.mongodb.com/products/charts"
               target="_blank"
-              className="underline hover:text-dracula-pink-100 duration-500"
+              className="underline hover:text-dracula-green-900 duration-500"
             >
               MongoDB Atlas Charts
             </Link>
           </p>
+
+          <div className="text-4xl mt-2 flex flex-row justify-center space-x-8">
+            <LinkIcon
+              link="https://www.linkedin.com/in/kuanhoulee/"
+              Icon={FaLinkedin}
+            />
+
+            <LinkIcon link="https://github.com/khanguslee" Icon={FaGithub} />
+
+            <LinkIcon
+              link="https://www.instagram.com/khanguslee"
+              Icon={FaInstagram}
+            />
+          </div>
         </div>
       </div>
     </>
