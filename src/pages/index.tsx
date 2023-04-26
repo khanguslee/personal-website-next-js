@@ -10,7 +10,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <div className={'w-screen h-screen flex flex-col justify-center'}>
+        <h1
+          className={
+            'text-dracula-green text-center md:text-8xl sm:text-6xl text-4xl font-medium'
+          }
+        >
+          khanguslee
+        </h1>
+      </div>
     </>
   );
 }
