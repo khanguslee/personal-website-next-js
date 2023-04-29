@@ -11,3 +11,7 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Deployment
+
+The project is automatically built and deployed onto the Vercel platform after each commit to the `master` branch.
